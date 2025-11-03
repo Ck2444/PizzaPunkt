@@ -1,14 +1,20 @@
+'use client';
 import React from 'react';
 import { FilterCheckbox, Title } from '.';
 import { Input } from '../ui';
 import { RangeSlider } from './range-slider';
 import { CheckboxFiltersGroup } from './checkbox-filters-group';
+import { useFilterIngredients } from '@/hooks/useFilterIngredients';
 
 interface Props {
   className?: string;
 }
 
 export const Filters: React.FC<Props> = ({ className }) => {
+  const { ingredients } = useFilterIngredients();
+
+  const items = ingredients.map((item) => ({ value: String(item.id), text: item.name }));
+
   return (
     <div className={className}>
       <Title text="Filtering" size="sm" className="mb-5 font-bold" />
@@ -34,82 +40,8 @@ export const Filters: React.FC<Props> = ({ className }) => {
         title="Ингридиенты"
         className="mt-5"
         limit={6}
-        defaultItems={[
-          {
-            text: 'Käsesoße',
-            value: '1',
-          },
-          {
-            text: 'Mozzarella',
-            value: '2',
-          },
-          {
-            text: 'Knoblauch',
-            value: '3',
-          },
-          {
-            text: 'Gewürzgurken',
-            value: '4',
-          },
-          {
-            text: 'Rote Zwiebel',
-            value: '5',
-          },
-          {
-            text: 'Tomaten',
-            value: '6',
-          },
-        ]}
-        items={[
-          {
-            text: 'Käsesoße',
-            value: '1',
-          },
-          {
-            text: 'Mozzarella',
-            value: '2',
-          },
-          {
-            text: 'Knoblauch',
-            value: '3',
-          },
-          {
-            text: 'Gewürzgurken',
-            value: '4',
-          },
-          {
-            text: 'Rote Zwiebel',
-            value: '5',
-          },
-          {
-            text: 'Tomaten',
-            value: '6',
-          },
-          {
-            text: 'Käsesoße',
-            value: '1',
-          },
-          {
-            text: 'Mozzarella',
-            value: '2',
-          },
-          {
-            text: 'Knoblauch',
-            value: '3',
-          },
-          {
-            text: 'Gewürzgurken',
-            value: '4',
-          },
-          {
-            text: 'Rote Zwiebel',
-            value: '5',
-          },
-          {
-            text: 'Tomaten',
-            value: '6',
-          },
-        ]}
+        defaultItems={items.slice(0, 6)}
+        items={items}
       />
     </div>
   );

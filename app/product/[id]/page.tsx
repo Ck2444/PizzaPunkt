@@ -1,4 +1,3 @@
-// app/product/[id]/page.tsx
 type PageParams = Promise<{ id: string }>;
 
 export default async function ProductPage({ params }: { params: PageParams }) {
