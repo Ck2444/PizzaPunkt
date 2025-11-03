@@ -1,36 +1,47 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# 🍕 PizzaPunkt
 
-## Getting Started
+**Fullstack-Anwendung für Online-Pizzabestellungen mit Next.js und TypeScript.**  
+Dieses Projekt demonstriert die realen Möglichkeiten von **Next.js 14** und modernen Frontend-Technologien.  
+Es kombiniert Client- und Server-Komponenten, SSR, Datenbankintegration und externe Services.
 
-First, run the development server:
+---
+
+## 🚀 Funktionen
+
+1. Vollständige Produktfilterung mit serverseitigem Rendering und Speicherung der Parameter in der URL  
+2. Produktanzeige und Hinzufügen von Artikeln in den Warenkorb  
+3. Anmeldung und Registrierung per E-Mail/Passwort, GitHub oder Google  
+4. Kontoaktivierung über E-Mail-Bestätigung  
+5. Bearbeitung des Benutzerprofils  
+6. Bezahlung der Produkte über ein integriertes Zahlungssystem  
+7. Produktanzeige im Modal oder auf einer separaten Seite (**Parallel Routes**)  
+8. Automatischer E-Mail-Versand bei Registrierung, Bestellung und erfolgreicher Zahlung  
+9. Verwendung von **Vercel** für Hosting und Datenbankspeicherung  
+10. Praktische Beispiele für die Zusammenarbeit von Client- und Server-Komponenten (nicht nur Theorie aus der Doku 😉)
+
+---
+
+## 🧩 Technologien
+
+- **Next.js** (Parallel Routes, Server Actions, API Routes)  
+- **TypeScript**  
+- **TailwindCSS + ShadCN**  
+- **Prisma + PostgreSQL**  
+- **NextAuth**  
+- **React Hook Form + Zod**  
+- **Zustand**  
+- **react-use**  
+- **nextjs-toploader**  
+- **react-hot-toast**  
+- **react-insta-stories**  
+- **lucide-react**  
+- **Resend**
+
+---
+
+## 🛠️ Installation
+
+1. Repository klonen:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
-
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
-
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
-
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
-
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+git clone https://github.com/Ck2444/PizzaPunkt.git
